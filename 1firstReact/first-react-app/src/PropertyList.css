@@ -1,0 +1,10 @@
+.property-ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 40px;
+}
