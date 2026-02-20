@@ -21,7 +21,7 @@ export default function ScoreKeeper({ numPlayer, target = 5 }) {
     });
   };
   // --- find score equal to target ---
-  const equal = player.some((p) => p.score === target);
+  const isWin = player.some((p) => p.score === target);
 
   return (
     <div>
@@ -33,11 +33,11 @@ export default function ScoreKeeper({ numPlayer, target = 5 }) {
               <button
                 onClick={() => addScore(p.id)}
                 style={{ marginLeft: "10px" }}
-                disabled={equal}
+                disabled={isWin}
               >
                 +1
               </button>
-              {p.score === target ? "WINNER" : null}
+              {p.score === target && "WINNER" }
             </li>
           );
         })}
